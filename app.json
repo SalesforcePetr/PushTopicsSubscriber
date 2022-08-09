@@ -1,0 +1,33 @@
+{
+  "name": "PushTopicsSubscriber",
+  "description": "Heroku Test App",
+  "repository": "https://github.com/SalesforcePetr/PushTopicsSubscriber",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["node", "jsforce"],
+  "env": {
+    "SFDC_USERNAME": {
+      "description": "Salesforce username"
+    },
+    "SFDC_PASSWORD": {
+      "description": "Salesforce password"
+    },
+    "SFDC_SECURITY_TOKEN": {
+      "description": "Salesforce security token" 
+    },
+    "PUSH_TOPIC_CHANNEL": {
+      "description": "Which PushTopic channel to subscribe to",
+      "value": "AccountAddressUpdates"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "image": "heroku/nodejs",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}

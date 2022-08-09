@@ -3,14 +3,14 @@ require('dotenv').config();
 const jsforce = require('jsforce');
 
 const conn = new jsforce.Connection();
-conn.login(`${process.env.SFDC_USERNAME}`, `${process.env.SFDC_PASSWORD}${process.env.SFDC_SECURITY_TOKEN}`, function(err, res) {
+conn.login(process.env.SFDC_USERNAME, `${process.env.SFDC_PASSWORD}${process.env.SFDC_SECURITY_TOKEN}`, function(err, res) {
   if (err) { 
       return console.error(err);
   }
 
   console.log('Authenticated');
   
-  conn.streaming.topic("AccountAddressUpdates").subscribe(function(message) {
+  conn.streaming.topic(process.env.PUSH_TOPIC_CHANNEL).subscribe(function(message) {
     console.log('------------------------------------------------');
     console.log('%cEvent Type: ' + `%c${message.event.type} at ${message.event.createdDate}`, 'font-weight: bold;', 'font-weight: normal;');
     //console.log('Object Id : ' + message.sobject.Id);
