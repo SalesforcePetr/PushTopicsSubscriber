@@ -1,8 +1,8 @@
 {
-  "name": "PushTopicsSubscriber",
+  "name": "push-topics-subscriber",
   "description": "Heroku Test App",
   "repository": "https://github.com/SalesforcePetr/PushTopicsSubscriber",
-  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "logo": "https://d259t2jj6zp7qm.cloudfront.net/images/v1530642317-trailhead_module_platform_events_basics_emk4dz.png",
   "keywords": ["node", "jsforce"],
   "env": {
     "SFDC_USERNAME": {
