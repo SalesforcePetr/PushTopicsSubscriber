@@ -6,17 +6,21 @@
   "keywords": ["node", "jsforce"],
   "env": {
     "SFDC_USERNAME": {
-      "description": "Salesforce username"
+      "description": "Salesforce username",
+      "required": true
     },
     "SFDC_PASSWORD": {
-      "description": "Salesforce password"
+      "description": "Salesforce password",
+      "required": true
     },
     "SFDC_SECURITY_TOKEN": {
-      "description": "Salesforce security token" 
+      "description": "Salesforce security token",
+      "required": true
     },
     "PUSH_TOPIC_CHANNEL": {
       "description": "Which PushTopic channel to subscribe to",
-      "value": "AccountAddressUpdates"
+      "value": "AccountAddressUpdates",
+      "required": true
     }
   },
   "formation": {
